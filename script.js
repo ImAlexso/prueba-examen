@@ -29,6 +29,12 @@ function insertarFila(nombre, apellidos, dni, telefono, id) {
   const fila = document.createElement("tr");
   fila.setAttribute("data-id", id);
 
+  // Avatar: imagen Lego (puedes cambiar URL o usar avatar SVG generado)
+  const tdAvatar = document.createElement("td");
+  const avatarHTML = `<img src="https://randomuser.me/api/portraits/lego/1.jpg" class="avatar-img" alt="Avatar"/>`;
+  tdAvatar.innerHTML = avatarHTML;
+  tdAvatar.classList.add("align-middle");
+
   const tdNombre = document.createElement("td");
   tdNombre.textContent = nombre;
   tdNombre.classList.add("align-middle");
@@ -78,6 +84,8 @@ function insertarFila(nombre, apellidos, dni, telefono, id) {
   tdAsistencia.appendChild(btnPresente);
   tdAsistencia.appendChild(btnEliminar);
 
+  // Añadir las celdas a la fila en orden
+  fila.appendChild(tdAvatar);
   fila.appendChild(tdNombre);
   fila.appendChild(tdApellidos);
   fila.appendChild(tdDNI);
