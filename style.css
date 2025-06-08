@@ -1,0 +1,54 @@
+.card.sin-bordes,
+.card-header.sin-bordes,
+.card-body.sin-bordes,
+.card-footer.sin-bordes {
+  border: none;
+  box-shadow: none;
+}
+.card-header {
+  background-color: white;
+}
+.titulo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.textoTitulo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: rgba(128, 128, 128, 0.3) 1px 1px 2px;
+  color: #888;
+}
+.cabecera-tabla th {
+  background-color: grey;
+  color: #343a40;
+  font-weight: bold;
+  text-align: center;
+}
+.btn {
+  background-color: grey;
+  border-color: #343a40;
+}
+.btn:hover {
+  background-color: #343a40;
+  color: white;
+}
+td,
+th {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+td img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.avatar-img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
