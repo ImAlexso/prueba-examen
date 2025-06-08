@@ -1,13 +1,16 @@
-// Firebase
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  deleteDoc,
-  doc
-} from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
+import { getDocs, collection } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore.js";
 
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const querySnapshot = await getDocs(collection(db, "alumnos"));
+    querySnapshot.forEach(doc => {
+      const data = doc.data();
+      insertarFila(data.nombre, data.apellidos, data.dni, data.telefono, doc.id);
+    });
+  } catch (error) {
+    console.error("Error al leer alumnos:", error);
+  }
+});
 // Configuración
 const firebaseConfig = {
   apiKey: "AIzaSyCs6Pw9oRaSqXy24csq4XWYeONK8bgMh4E",
